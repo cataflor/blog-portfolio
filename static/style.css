@@ -32,7 +32,18 @@ body {
     max-width: 800px;
 }
 
-.cabecalho h1 {
+.container-header {
+    border-top: 1px solid #e7e7e7; /* A linha que separa */
+    padding-top: 10px;          /* Espaço entre a linha e os links do menu */
+    width: 100%;             /* CHAVE: Força o menu a ocupar a largura total do seu .container (que é 800px) */
+    text-align: center;
+    display: flex;
+    align-items: center;  
+    justify-content: center; 
+}
+
+
+/*.cabecalho h1 {
     font-size: 24px;
     font-weight: 700;
     width: 100%; 
@@ -40,6 +51,32 @@ body {
     border-bottom: 1px solid #ddd;
     padding-bottom: 15px;
     margin-bottom: 15px;
+}*/
+
+/* imagem logo */
+
+.logo-site h1 {
+    margin: 0; 
+    width: auto; 
+    font-size: 24px; 
+    font-weight: 700;
+    border-bottom: none; 
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+.logo-site {
+    display: flex;
+    align-items: center; 
+    gap: 0px; 
+    justify-content: center; 
+}
+
+.logo-site img {
+    width: 50px; 
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
 }
 
 .menu-navegacao {
@@ -75,7 +112,7 @@ body {
 }
 
 .apresentacao {
-    text-align: center;
+    text-align: left;
     margin-bottom: 40px;
     padding-bottom: 20px;
     border-bottom: 1px solid #eee;
@@ -130,11 +167,54 @@ body {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
+/* Container que ALINHA os 3 blocos lado a lado */
+.container-diferenciais {
+    display: flex; /* CHAVE: Coloca os itens em uma linha */
+    justify-content: space-around; /* Distribui os itens uniformemente no contêiner */
+    align-items: flex-start; /* Alinha os itens pelo topo (opcional) */
+    padding: 50px 20px;
+    max-width: 1100px; /* Limita a largura da seção na tela */
+    margin: 0 auto; /* Centraliza a seção na tela */
+}
+
+/* Estilos para cada um dos 3 blocos individuais */
+.diferencial-item {
+    /* Define que cada bloco ocupará aproximadamente um terço */
+    flex-basis: 30%; 
+    
+    /* Centraliza o texto e a imagem dentro de cada bloco */
+    text-align: center; 
+    padding: 0 15px; /* Espaço interno para não encostar nas bordas */
+}
+
+/* Estilização da imagem */
+.diferencial-item img {
+    /* Define um tamanho fixo para as imagens, como no exemplo */
+    width: 120px; 
+    height: auto;
+    margin-bottom: 20px; /* Espaço entre a imagem e o título */
+}
+
+/* Estilização dos títulos e parágrafos */
+.diferencial-item h3 {
+    font-size: 1.2em;
+    color: #333; /* Cor mais escura para o título */
+    margin-bottom: 10px;
+}
+
+.diferencial-item p {
+    font-size: 0.9em;
+    color: #666; /* Cor mais clara para o texto */
+    line-height: 1.5;
+}
+
+/* caixa de inscreva-se  */
+
 .newsletter {
     background-color: rgb(244, 239, 255);
     padding: 30px;
     border-radius: 6px;
-    text-align: center;
+    text-align: left;
     margin: 40px 0;
 }
 
@@ -162,7 +242,12 @@ body {
     font-size: 16px;
 }
 
-/* rodapé */
+.newsletter button:hover {
+    background-color: #e2487b;
+}
+
+/* rodapé index */
+
 .rodape {
     background-color: #363636;
     color: #f8f8f8;
@@ -181,66 +266,10 @@ body {
     color: #fff;
 }
 
-/* formulario de contato */
-
-.secao-contato {
-    max-width: 600px;
-    margin: 40px auto;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
-.secao-contato h2, .secao-contato p {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.formulario-contato label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-    margin-top: 15px;
-}
-
-.formulario-contato input[type="text"],
-.formulario-contato input[type="email"],
-.formulario-contato textarea {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 16px;
-    box-sizing: border-box; 
-}
-
-.formulario-contato textarea {
-    resize: vertical;
-}
-
-.formulario-contato button[type="submit"] {
-    display: block;
-    width: 100%;
-    padding: 12px;
-    margin-top: 25px;
-    background-color: #363636;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 18px;
-    transition: background-color 0.3s;
-}
-
-.formulario-contato button[type="submit"]:hover {
-    background-color: #5a5959;
-}
-
 /* projetos */
 
 .secao-projetos h2, .secao-projetos p {
-    text-align: center;
+    text-align: left;
     margin-bottom: 30px;
 }
 
@@ -317,161 +346,7 @@ body {
     color: white;
 }
 
-.secao-certificados h2, .secao-certificados p {
-    text-align: center;
-    margin-bottom: 30px;
-}
-
-/* certificados */
-
-.certificado-card {
-    background-color: #fff;
-    padding: 30px;
-    margin-bottom: 25px;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    transition: transform 0.3s, box-shadow 0.3s;
-    border-left: 5px solid #f3749e; 
-}
-
-.certificado-card h3 {
-    font-size: 20px;
-    margin-bottom: 5px;
-    color: var(--texto-principal);
-}
-
-.certificado-card .instituicao {
-    font-size: 14px;
-    font-weight: bold;
-    color: #087af3; 
-    margin-bottom: 10px;
-}
-
-.certificado-card .detalhe {
-    font-size: 16px;
-    margin-bottom: 15px;
-}
-
-.link-certificado {
-    display: inline-block;
-    padding: 8px 15px;
-    background-color: #f3749e;
-    color: white;
-    text-decoration: none;
-    border-radius: 4px;
-    font-weight: 500;
-    transition: background-color 0.3s;
-}
-
-.link-certificado:hover {
-    background-color: #0858ad;
-}
-
-/* link em Dark Mode  
-body.dark-mode .link-certificado {
-    background-color: #4a90e2; 
-} */
-
-/* sobre */
-
-.secao-sobre {
-    padding: 40px 0;
-}
-
-.secao-sobre h2 {
-    text-align: center;
-    font-size: 32px;
-    margin-bottom: 30px;
-}
-
-.perfil {
-    display: flex;
-    gap: 40px;
-    align-items: flex-start; 
-}
-
-@media (max-width: 700px) {
-    .perfil {
-        flex-direction: column; 
-        text-align: center;
-        gap: 20px;
-    }
-    .foto-perfil {
-        margin: 0 auto; 
-    }
-    .cabecalho .container {
-        flex-direction: column;
-        gap: 10px;
-    }
-    .menu-navegacao ul {
-        justify-content: center;
-    }
-
-    .links-projeto {
-        text-align: center; 
-    }
-    .links-projeto a {
-        display: block;
-        margin: 10px 0;
-    }
-}
-
-.foto-perfil {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%; 
-    object-fit: cover;
-    border: 5px solid #fff;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-}
-
-.texto-perfil {
-    flex-grow: 1; 
-}
-
-.texto-perfil p {
-    margin-bottom: 15px;
-    font-size: 17px;
-    line-height: 1.7;
-}
-
-.texto-perfil h3 {
-    margin-top: 25px;
-    margin-bottom: 10px;
-    font-size: 20px;
-    color: #363636;
-}
-
-.habilidades {
-    list-style: none; 
-    padding-left: 0;
-    margin-bottom: 25px;
-}
-
-.habilidades li {
-    background-color: #eee;
-    display: inline-block;
-    padding: 5px 10px;
-    margin: 5px 5px 5px 0;
-    border-radius: 4px;
-    font-size: 14px;
-}
-
-.cta-contato {
-    display: inline-block;
-    background-color: #0d7bf1; 
-    color: white;
-    padding: 12px 25px;
-    margin-top: 20px;
-    border-radius: 5px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: background-color 0.3s;
-}
-
-.cta-contato:hover {
-    background-color: #0756ac;
-}
+/* blog */
 
 .blog-list-item {
     display: flex; 
@@ -506,6 +381,7 @@ body.dark-mode .link-certificado {
 }
 
 /* responsividade para o blog  */
+
 @media (max-width: 700px) {
     .blog-list-item {
         flex-direction: column-reverse; 
@@ -564,6 +440,7 @@ body.dark-mode .link-certificado {
 }
 
 /* link de voltar para paginas  */
+
 .link-voltar {
     display: inline-block;
     margin-top: 20px;
@@ -576,4 +453,159 @@ body.dark-mode .link-certificado {
 
 .link-voltar:hover {
     color: #0656ac;
+}
+
+/* formulario de contato */
+
+.secao-contato {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.secao-contato h2, .secao-contato p {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.formulario-contato label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+.formulario-contato input[type="text"],
+.formulario-contato input[type="email"],
+.formulario-contato textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    box-sizing: border-box; 
+}
+
+.formulario-contato textarea {
+    resize: vertical;
+}
+
+.formulario-contato button[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    margin-top: 25px;
+    background-color: #363636;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s;
+}
+
+.formulario-contato button[type="submit"]:hover {
+    background-color: #5a5959;
+}
+
+/* sobre */
+
+.secao-sobre h2 {
+    text-align: left;
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.perfil {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 20px;
+    align-items: flex-start; 
+}
+
+.foto-perfil {
+    margin-bottom: 20px;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%; 
+    object-fit: cover;
+    border: 5px solid #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.texto-perfil {
+    flex-grow: 1; 
+}
+
+.texto-perfil p {
+    margin-bottom: 15px;
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+.texto-perfil h3 {
+    margin-top: 25px;
+    margin-bottom: 10px;
+    font-size: 20px;
+    color: #363636;
+}
+
+.habilidades {
+    list-style: none; 
+    padding-left: 0;
+    margin-bottom: 25px;
+}
+
+.habilidades li {
+    background-color: #eee;
+    display: inline-block;
+    padding: 5px 10px;
+    margin: 5px 5px 5px 0;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.cta-contato {
+    display: inline-block;
+    background-color: #f3749e;
+    color: white;
+    padding: 12px 25px;
+    margin-top: 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.cta-contato:hover {
+    background-color: #e2487b;
+}
+
+@media (max-width: 700px) {
+    .perfil {
+        flex-direction: column; 
+        text-align: center;
+        gap: 20px;
+    }
+    .foto-perfil {
+        margin: 0 auto; 
+    }
+    .cabecalho .container {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .menu-navegacao ul {
+        justify-content: center;
+    }
+
+    .links-projeto {
+        text-align: center; 
+    }
+    .links-projeto a {
+        display: block;
+        margin: 10px 0;
+    }
 }
