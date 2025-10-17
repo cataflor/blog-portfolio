@@ -1,0 +1,579 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; 
+    line-height: 1.6;
+    background-color: #f8f8f8; 
+    color: #333; 
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto; 
+    padding: 0 20px; 
+}
+
+.cabecalho {
+    background-color: #fff;
+    padding: 20px 0;
+    border-bottom: 1px solid #e4e4e4;
+    padding-bottom: 10px;
+}
+
+.cabecalho .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%; 
+    max-width: 800px;
+}
+
+.cabecalho h1 {
+    font-size: 24px;
+    font-weight: 700;
+    width: 100%; 
+    text-align: center; 
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+}
+
+.menu-navegacao {
+    width: 100%;
+    max-width: 450px;
+    font-size: 14px;
+}
+
+.menu-navegacao ul {
+    list-style: none; 
+    display: flex;
+    justify-content: center;
+}
+
+.menu-navegacao li {
+    margin-left: 20px;
+}
+
+.menu-navegacao a {
+    text-decoration: none; 
+    color: #555;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.menu-navegacao a:hover {
+    color: #000;
+}
+
+.conteudo-principal {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.apresentacao {
+    text-align: center;
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.apresentacao h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.lista-posts h3 {
+    font-size: 20px;
+    margin-bottom: 20px;
+    border-left: 4px solid #363636;
+    padding-left: 10px;
+}
+
+.post-item {
+    background-color: #fff;
+    padding: 25px;
+    margin-bottom: 20px;
+    border-radius: 6px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.08); 
+}
+
+.post-item h4 {
+    font-size: 22px;
+    margin-bottom: 5px;
+}
+
+.post-item h4 a {
+    text-decoration: none;
+    color: #000000;
+}
+
+.post-item .data {
+    color: #ccc9c9;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+/* GIF */
+
+.gif-destaque {
+    /* largura do gif */
+    max-width: 750px; 
+    width: 100%;
+    height: auto;
+    display: block; 
+    margin: 20px auto 20px auto; 
+    border-radius: 8px; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.newsletter {
+    background-color: rgb(244, 239, 255);
+    padding: 30px;
+    border-radius: 6px;
+    text-align: center;
+    margin: 40px 0;
+}
+
+.newsletter h4 {
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+.newsletter input[type="email"] {
+    padding: 10px;
+    width: 60%;
+    max-width: 300px;
+    border: 1px solid #ccc9c9;
+    border-radius: 4px 0 0 4px; 
+    font-size: 16px;
+}
+
+.newsletter button {
+    padding: 10px 20px;
+    background-color: #f3749e;
+    color: white;
+    border: none;
+    border-radius: 0 4px 4px 0; 
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* rodapé */
+.rodape {
+    background-color: #363636;
+    color: #f8f8f8;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 14px;
+}
+
+.rodape a {
+    color: #aaa;
+    text-decoration: none;
+    margin: 0 5px;
+}
+
+.rodape a:hover {
+    color: #fff;
+}
+
+/* formulario de contato */
+
+.secao-contato {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.secao-contato h2, .secao-contato p {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.formulario-contato label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+.formulario-contato input[type="text"],
+.formulario-contato input[type="email"],
+.formulario-contato textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    box-sizing: border-box; 
+}
+
+.formulario-contato textarea {
+    resize: vertical;
+}
+
+.formulario-contato button[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    margin-top: 25px;
+    background-color: #363636;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s;
+}
+
+.formulario-contato button[type="submit"]:hover {
+    background-color: #5a5959;
+}
+
+/* projetos */
+
+.secao-projetos h2, .secao-projetos p {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.projeto-card {
+    background-color: #fff;
+    padding: 30px;
+    margin-bottom: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    border-left: 5px solid #363636; 
+}
+
+.projeto-card:hover { 
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(255, 82, 177, 0.397); 
+}
+
+.projeto-card h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.projeto-card p {
+    text-align: left;
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+
+.tecnologias {
+    margin-bottom: 15px;
+}
+
+.tag {
+    display: inline-block;
+    background-color: #eee;
+    color: #555;
+    font-size: 12px;
+    padding: 5px 10px;
+    border-radius: 4px;
+    margin-right: 8px;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.links-projeto a {
+    display: inline-block;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+    margin-right: 15px;
+    transition: background-color 0.3s;
+}
+
+.link-demo {
+    background-color: #363636;
+    color: white;
+    border: 1px solid #363636;
+}
+
+.link-demo:hover {
+    background-color: #555;
+}
+
+.link-codigo {
+    background-color: transparent;
+    color: #363636;
+    border: 1px solid #363636;
+}
+
+.link-codigo:hover {
+    background-color: #363636;
+    color: white;
+}
+
+.secao-certificados h2, .secao-certificados p {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* certificados */
+
+.certificado-card {
+    background-color: #fff;
+    padding: 30px;
+    margin-bottom: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    border-left: 5px solid #f3749e; 
+}
+
+.certificado-card h3 {
+    font-size: 20px;
+    margin-bottom: 5px;
+    color: var(--texto-principal);
+}
+
+.certificado-card .instituicao {
+    font-size: 14px;
+    font-weight: bold;
+    color: #087af3; 
+    margin-bottom: 10px;
+}
+
+.certificado-card .detalhe {
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.link-certificado {
+    display: inline-block;
+    padding: 8px 15px;
+    background-color: #f3749e;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: 500;
+    transition: background-color 0.3s;
+}
+
+.link-certificado:hover {
+    background-color: #0858ad;
+}
+
+/* link em Dark Mode  
+body.dark-mode .link-certificado {
+    background-color: #4a90e2; 
+} */
+
+/* sobre */
+
+.secao-sobre {
+    padding: 40px 0;
+}
+
+.secao-sobre h2 {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+
+.perfil {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start; 
+}
+
+@media (max-width: 700px) {
+    .perfil {
+        flex-direction: column; 
+        text-align: center;
+        gap: 20px;
+    }
+    .foto-perfil {
+        margin: 0 auto; 
+    }
+    .cabecalho .container {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .menu-navegacao ul {
+        justify-content: center;
+    }
+
+    .links-projeto {
+        text-align: center; 
+    }
+    .links-projeto a {
+        display: block;
+        margin: 10px 0;
+    }
+}
+
+.foto-perfil {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%; 
+    object-fit: cover;
+    border: 5px solid #fff;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.texto-perfil {
+    flex-grow: 1; 
+}
+
+.texto-perfil p {
+    margin-bottom: 15px;
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+.texto-perfil h3 {
+    margin-top: 25px;
+    margin-bottom: 10px;
+    font-size: 20px;
+    color: #363636;
+}
+
+.habilidades {
+    list-style: none; 
+    padding-left: 0;
+    margin-bottom: 25px;
+}
+
+.habilidades li {
+    background-color: #eee;
+    display: inline-block;
+    padding: 5px 10px;
+    margin: 5px 5px 5px 0;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.cta-contato {
+    display: inline-block;
+    background-color: #0d7bf1; 
+    color: white;
+    padding: 12px 25px;
+    margin-top: 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.cta-contato:hover {
+    background-color: #0756ac;
+}
+
+.blog-list-item {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center;
+    gap: 20px;
+    padding: 30px 25px;
+}
+
+.blog-item-conteudo {
+    flex-grow: 1; 
+}
+
+.blog-item-imagem {
+    flex-shrink: 0; 
+    width: 150px; 
+    height: 100px;
+    overflow: hidden; 
+    border-radius: 4px;
+}
+
+.blog-item-imagem img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
+
+.snippet {
+    font-size: 15px;
+    color: var(--texto-principal);
+    margin-top: 10px;
+}
+
+/* responsividade para o blog  */
+@media (max-width: 700px) {
+    .blog-list-item {
+        flex-direction: column-reverse; 
+        align-items: flex-start;
+    }
+    .blog-item-imagem {
+        width: 100%; 
+        height: 200px;
+        margin-bottom: 15px;
+    }
+}
+
+/* estilo de quando abre o artigo do blog */
+
+.artigo-individual {
+    max-width: 650px; 
+    margin: 40px auto; 
+    padding: 0 10px;
+}
+
+.artigo-cabecalho {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.artigo-cabecalho h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+    border-bottom: none !important; 
+}
+
+.artigo-corpo {
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+.artigo-corpo p {
+    margin-bottom: 25px;
+}
+
+.artigo-corpo figure {
+    margin: 30px 0;
+    text-align: center;
+}
+
+.artigo-corpo img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 6px;
+}
+
+.artigo-corpo figcaption {
+    font-size: 13px;
+    color: var(--texto-secundario);
+    margin-top: 10px;
+}
+
+/* link de voltar para paginas  */
+.link-voltar {
+    display: inline-block;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: #0978f0; 
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.link-voltar:hover {
+    color: #0656ac;
+}

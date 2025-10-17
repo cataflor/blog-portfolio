@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>portfólio</title>
+    <link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+    <header class="cabecalho">
+        <h1>Caroline Anjos</h1>
+        <div class="container">
+            <nav class="menu-navegacao">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="projetos.html">Projetos</a></li>
+                    <li><a href="certificados.html">Certificados</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                    <li><a href="sobre.html">Sobre</a></li>
+                </ul>
+            </nav>
+        </div>
+</header>
+
+    <main class="conteudo-principal container">
+        
+        <section class="secao-contato">
+            <h2>Entre em Contato</h2>
+            <p>Interessado em um projeto ou parceria? Envie uma mensagem!</p>
+
+            <form name="contato" method="POST" data-netlify="true" class="formulario-contato">
+                
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required>
+
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="mensagem">Mensagem:</label>
+                <textarea id="mensagem" name="mensagem" rows="6" required></textarea>
+
+                <button type="submit">Enviar Mensagem</button>
+            </form>
+        </section>
+
+    </main>
+    
+    </body>
+</html>
