@@ -5,54 +5,77 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>portfólio</title>
     <link rel="stylesheet" href="../static/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Upright&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
     <header class="cabecalho">
-        <h1>Caroline Anjos</h1>
-        <div class="container">
-            <nav class="menu-navegacao">
+        <div class="logo">
+            <img src="../static/images/hand-drawn-ac-logo-design-template.png" alt="Logo">
+            <div class="titulo">
+                <h1>Caroline Anjos</h1>
+            </div>
+        </div>
+
+        <div class="header menu-scrolling-container">
+            <nav class="menu-navegacao" id="menu-principal">
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="projetos.html">Projetos</a></li>
                     <li><a href="blog.html">Blog</a></li>
                     <li><a href="contato.html">Contato</a></li>
                     <li><a href="sobre.html">Sobre</a></li>
-                </ul>
+                    </ul>
             </nav>
+
+        <button class="dark-mode-toggle" aria-label="Alternar modo escuro">
+            <i class="fas fa-adjust"></i> 
+        </button>
         </div>
-</header>
+    
+    </header>
+
 
     <main class="conteudo-principal container">
-        
+        <div id="breadcrumbs">
+            <div class="breadcrumbs-home">
+                <a href="index.html">Home</a>
+                <span class="sep">»</span>
+                Projetos
+        </div>
+
         <section class="secao-projetos">
             <h2>Meus Principais Projetos</h2>
             <p>Confira alguns dos meus trabalhos mais recentes, cobrindo desenvolvimento Front-end e Back-end.</p>
 
-            <article class="projeto-card">
+            <article class="projeto-tec">
                 <h3>E-commerce com Carrinho em JavaScript</h3>
                 <div class="tecnologias">
-                    <span class="tag">HTML5</span>
-                    <span class="tag">CSS3</span>
-                    <span class="tag">Vanilla JS</span>
-                    <span class="tag">Local Storage</span>
+                    <span class="tec">HTML5</span>
+                    <span class="tec">CSS3</span>
+                    <span class="tec">Vanilla JS</span>
+                    <span class="tec">Local Storage</span>
                 </div>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                <div class="links-projeto">
+                <div class="link-projeto">
                     <a href="URL_DEMO_DO_PROJETO" target="_blank" class="link-demo">Ver Demo</a>
                     <a href="URL_GITHUB_DO_PROJETO" target="_blank" class="link-codigo">Código Fonte (GitHub)</a>
                 </div>
             </article>
 
-            <article class="projeto-card">
+            <article class="projeto-tec">
                 <h3>API REST para Gestão de Tarefas</h3>
                 <div class="tecnologias">
-                    <span class="tag">Node.js</span>
-                    <span class="tag">Express</span>
-                    <span class="tag">MongoDB</span>
-                    <span class="tag">Docker</span>
+                    <span class="tec">Node.js</span>
+                    <span class="tec">Express</span>
+                    <span class="tec">MongoDB</span>
+                    <span class="tec">Docker</span>
                 </div>
                 <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-                <div class="links-projeto">
+                <div class="link-projeto">
                     <a href="URL_DOCUMENTACAO_API" target="_blank" class="link-demo">Documentação</a>
                     <a href="URL_GITHUB_DA_API" target="_blank" class="link-codigo">Código Fonte (GitHub)</a>
                 </div>
@@ -61,6 +84,14 @@
             </section>
 
     </main>
-
-    </body>
+    <footer class="rodape">
+                <div class="container-rodape">
+                    <p>&copy; 2025 Caroline Anjos. Todos os direitos reservados.</p>
+                    <div class="links-sociais">
+                        <a href="https://github.com/cataflor">GitHub</a> | <a href="www.linkedin.com/in/caroline-anjos-456a53268">LinkedIn</a>
+                    </div>
+                </div>
+            </footer>
+    <script src="../index.js"></script>
+</body>
 </html>

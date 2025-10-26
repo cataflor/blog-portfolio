@@ -5,54 +5,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>portfólio</title>
     <link rel="stylesheet" href="../static/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <header class="cabecalho">
-        <h1>Caroline Anjos</h1>
-        <div class="container">
-            <nav class="menu-navegacao">
+        <div class="logo">
+            <img src="../static/images/hand-drawn-ac-logo-design-template.png" alt="Logo">
+            <div class="titulo">
+                <h1>Caroline Anjos</h1>
+            </div>
+        </div>
+
+        <div class="header menu-scrolling-container">
+            <nav class="menu-navegacao" id="menu-principal">
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="projetos.html">Projetos</a></li>
-                    <li><a href="certificados.html">Certificados</a></li>
                     <li><a href="blog.html">Blog</a></li>
                     <li><a href="contato.html">Contato</a></li>
                     <li><a href="sobre.html">Sobre</a></li>
-                </ul>
+                    </ul>
             </nav>
+
+        <button class="dark-mode-toggle" aria-label="Alternar modo escuro">
+            <i class="fas fa-adjust"></i> 
+        </button>
         </div>
-</header>
-
-<main class="conteudo-principal container">
-        <a href="../blog.html" class="link-voltar">← Voltar para o Blog</a>
-        <article class="artigo-individual">
-            
-            <header class="artigo-cabecalho">
-                <h1>Título do Artigo: IA e Filosofia</h1>
-                <p class="subtitulo">Somos condenados, mas vamos ser felizes com isso. (Reflexões de café)</p>
-                <p class="meta-data">Por: Caroline Anjos | 20 de Setembro, 2025</p>
-                
-                </header>
-
-            <div class="artigo-corpo">
-                <p>Há séculos, éramos caçadores e coletores. Nosso objetivo principal era encontrar comida, construir nossas casas e evitar ser capturados por outras tribos ou animais selvagens.</p>
-
-                <figure class="imagem-artigo">
-                    <img src="../../static/imagens/caverna.jpg" alt="Pintura rupestre">
-                    <figcaption>Vaca Vermelha e Cinco Cavalos Chineses da Caverna de Lascaux. Fonte: Wikimedia Commons</figcaption>
-                </figure>
-
-                <p>Nós vivemos sonhos curtos, sonhos do nível mais baixo da pirâmide de Maslow, e não podíamos imaginar a nós mesmos empenhados na navegação de pesquisa do YouTube.</p>
-
-                </div>
-
-            <footer class="artigo-rodape">
-                <section class="newsletter">...</section>
-            </footer>
-
-        </article>
-
-    </main>
     
-    </body>
+    </header>
+
+    <main class="conteudo-principal container">
+            
+        
+
+
+
+
+
+
+
+
+    </main> 
+
+    
+    <footer class="rodape">
+                <div class="container-rodape">
+                    <p>&copy; 2025 Caroline Anjos. Todos os direitos reservados.</p>
+                    <div class="links-sociais">
+                        <a href="https://github.com/cataflor">GitHub</a> | <a href="www.linkedin.com/in/caroline-anjos-456a53268">LinkedIn</a>
+                    </div>
+                </div>
+    </footer>
+        <button id="scroll-to-top" title="Voltar ao Topo">
+            <i class="fas fa-chevron-up"></i>
+        </button>    
+    <script src="../index.js"></script>
+</body>
 </html>

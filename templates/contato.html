@@ -5,22 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>portfólio</title>
     <link rel="stylesheet" href="../static/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <header class="cabecalho">
-        <h1>Caroline Anjos</h1>
-        <div class="container">
-            <nav class="menu-navegacao">
+        <header class="cabecalho">
+        <div class="logo">
+            <img src="../static/images/hand-drawn-ac-logo-design-template.png" alt="Logo">
+            <div class="titulo">
+                <h1>Caroline Anjos</h1>
+            </div>
+        </div>
+
+        <div class="header menu-scrolling-container">
+            <nav class="menu-navegacao" id="menu-principal">
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="projetos.html">Projetos</a></li>
                     <li><a href="blog.html">Blog</a></li>
                     <li><a href="contato.html">Contato</a></li>
                     <li><a href="sobre.html">Sobre</a></li>
-                </ul>
+                    </ul>
             </nav>
+
+        <button class="dark-mode-toggle" aria-label="Alternar modo escuro">
+            <i class="fas fa-adjust"></i> 
+        </button>
         </div>
-</header>
+    
+    </header>
+
 
     <main class="conteudo-principal container">
         
@@ -44,6 +57,14 @@
         </section>
 
     </main>
-    
-    </body>
+        <footer class="rodape">
+                <div class="container-rodape">
+                    <p>&copy; 2025 Caroline Anjos. Todos os direitos reservados.</p>
+                    <div class="links-sociais">
+                        <a href="https://github.com/cataflor">GitHub</a> | <a href="www.linkedin.com/in/caroline-anjos-456a53268">LinkedIn</a>
+                    </div>
+                </div>
+            </footer>
+    <script src="../index.js"></script>
+</body>
 </html>
